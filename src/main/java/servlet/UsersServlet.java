@@ -28,7 +28,7 @@ public class UsersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
          cookieService = new CookieService(req, resp);
          int id = getActiveUserID();
-        if(serviceUser.getNext(id).isPresent())
+        if(serviceUser.getNext(id).isEmpty())
             resp.sendRedirect("/likedall");
          serviceUser.getNext(id).ifPresent(user -> {
              HashMap<String, Object> data = new HashMap<>();
