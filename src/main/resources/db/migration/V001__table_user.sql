@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `tinderdb`.`user`
+CREATE TABLE IF NOT EXISTS `bf88a4c93d33b2`.`user`
 (
     `id`         INT         NOT NULL AUTO_INCREMENT,
     `name`       VARCHAR(45) NOT NULL,
