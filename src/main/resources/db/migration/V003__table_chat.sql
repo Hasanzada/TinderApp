@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `bf88a4c93d33b2`.`chat`
+CREATE TABLE IF NOT EXISTS `heroku_0db43a596d5905f`.`chat`
 (
     `id`           INT         NOT NULL AUTO_INCREMENT,
     `user_from_id` INT         NULL,
