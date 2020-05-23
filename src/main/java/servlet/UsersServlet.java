@@ -30,7 +30,6 @@ public class UsersServlet extends HttpServlet {
          int id = getActiveUserID();
         if(serviceUser.getNext(id).isPresent())
             resp.sendRedirect("/likedall");
-
          serviceUser.getNext(id).ifPresent(user -> {
              HashMap<String, Object> data = new HashMap<>();
              data.put("user", user);
