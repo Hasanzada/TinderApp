@@ -25,16 +25,18 @@ public class UsersServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
          cookieService = new CookieService(req, resp);
          int id = getActiveUserID();
+        if(serviceUser.getNext(id).isPresent())
+            resp.sendRedirect("/likedall");
+
          serviceUser.getNext(id).ifPresent(user -> {
              HashMap<String, Object> data = new HashMap<>();
              data.put("user", user);
              engine.render("like-page.ftl", data, resp);
          });
-         if(serviceUser.getNext(id).isPresent())
-             resp.sendRedirect("/likedall");
+
     }
 
     @Override
