@@ -20,7 +20,7 @@ public class TinderApp {
     private static final EnumSet<DispatcherType> ft = EnumSet.of(DispatcherType.REQUEST);
 
     public static void main(String[] args) throws Exception {
-        DbSetup.migrate(ConnDetails.URL, ConnDetails.USERNAME, ConnDetails.PASSWORD);
+        DbSetup.migrate(ConnDetails.URL, ConnDetails.USERNAME, ConnDetails.PASSWORD, true);
         Server server = new Server(HerokuEnv.port());
         ServletContextHandler handler = new ServletContextHandler();
 
