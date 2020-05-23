@@ -11,7 +11,7 @@ public class HerokuEnv {
             String port = System.getenv("PORT");
             return Integer.parseInt(port);
         } catch (NumberFormatException ex) {
-            return 8080;
+            return 5000;
         }
     }
 

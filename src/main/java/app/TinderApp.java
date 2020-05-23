@@ -21,7 +21,7 @@ public class TinderApp {
 
     public static void main(String[] args) throws Exception {
         DbSetup.migrate(ConnDetails.URL, ConnDetails.USERNAME, ConnDetails.PASSWORD);
-        Server server = new Server(8080);
+        Server server = new Server(HerokuEnv.port());
         ServletContextHandler handler = new ServletContextHandler();
 
         TemplateEngine engine = TemplateEngine.folder("./content/templates");
