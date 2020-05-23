@@ -15,9 +15,8 @@ public class ExtractClassFromResultSet {
         String name = rs.getString("name");
         String surname = rs.getString("surname");
         String imageUrl = rs.getString("imgurl");
-        String lastLogin = rs.getString("last_login");
         String job = rs.getString("job");
-        return new User(id, email, password, name, surname, imageUrl, lastLogin, job);
+        return new User(id, email, password, name, surname, imageUrl, job);
     }
 
     public static Chat extractChat(ResultSet rs) throws SQLException {

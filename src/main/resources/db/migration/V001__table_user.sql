@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `heroku_19d25fdf0561838`.`user`
+CREATE TABLE IF NOT EXISTS `tinderdb`.`user`
 (
     `id`         INT         NOT NULL AUTO_INCREMENT,
     `name`       VARCHAR(45) NOT NULL,

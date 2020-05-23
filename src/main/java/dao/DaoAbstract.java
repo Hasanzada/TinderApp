@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class DaoAbstract<A> implements DAO<A>{
+public abstract class DaoAbstract<A> implements DAO<A> {
 
     public List<User> getAll(int id) {
         List<User> users = new ArrayList<>();

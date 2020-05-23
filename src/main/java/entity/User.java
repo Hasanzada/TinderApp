@@ -14,7 +14,6 @@ public class User {
     private String name;
     private String surname;
     private String imageUrl;
-    private String lastLogin;
     private String job;
 
 }
