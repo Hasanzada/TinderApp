@@ -33,7 +33,7 @@ public class UsersServlet extends HttpServlet {
              data.put("user", user);
              engine.render("like-page.ftl", data, resp);
          });
-         if(serviceUser.getNext(id).isEmpty())
+         if(serviceUser.getNext(id).isPresent())
              resp.sendRedirect("/likedall");
     }
 
